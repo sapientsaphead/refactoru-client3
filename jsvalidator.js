@@ -26,13 +26,25 @@ else {
 	prompt("You must enter a valid postal code.");
 }
 
-//State Abbreviation
-var stateabb = prompt("Please enter your state code.","");
-if(stateabb.length === 2 && stateabb.charAt(0,1) ===){
-	prompt("You must enter a valid state code.");
+//State Abbreviation (added function to ensure a correct response because it's fun)
+var promptstate = function () {
+	var stateabb = prompt("Please enter your state code.","");
+	if(stateabb.length === 2 && stateabb.toUpperCase() === stateabb){
+		alert("Thank you. Your information belong to us.");
+	}
+	else {
+		promptstate()
+	}
+}
+promptstate() 
+
+
+
+//Married
+var married = prompt("Are you married? Please answer Yes or No.","");
+if(married.toLowerCase() === "yes" || married.toLowerCase() === "no"){
+	alert("Thank you. Your information belong to us.");
 }
 else {
-	alert("Thank you. Your information belong to us.")
+	prompt("Please answer Yes or No.");
 }
-
-toUpperCase

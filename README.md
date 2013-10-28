@@ -18,6 +18,7 @@
 3. Alert the user if their phone number is valid (just true or false) according to the simple rule that the fourth and eighth characters must be dashes.
 
 4. Following the same procedure as #2 and #3 above to prompt and validate the following fields:
+  
   * birth date
 
     * must follow the format xx/xx/xx
